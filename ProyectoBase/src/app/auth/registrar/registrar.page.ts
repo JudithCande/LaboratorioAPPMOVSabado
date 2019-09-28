@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-registrar',
@@ -6,10 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrar.page.scss'],
 })
 export class RegistrarPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  registrarForm: FormGroup;
+  submitted = false;
+  constructor(private formBuilder: FormBuilder) {
+this.registrarForm=this.formBuilder.group({
+      nombre: ['', Validators.required],
+      correo: ['', [Validators.required, Validators.email]],
+      contrasena:['',[Validators.required, Validators.minLength(6)]],
+      confirmarContrasena: ['', Validators.required]
+    });
   }
-
-}
+    ngOnInit() {}
+    get f(){ return this.registrarForm.controls;}
+    registrar(){
+      console.log(this.registrarForm.valid);
+    }
+    /*registrar(form){
+      let inputs = form.form.value;
+      if(inputs.password != inputs.confirmarPassword){
+        console.log();
+      }
+    }
+    MustMatch(controlName: string, matchingControlName: string){
+      return true;
+    }*/
+  }
