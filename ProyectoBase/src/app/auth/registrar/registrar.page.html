@@ -14,7 +14,7 @@
               <div color="error" *ngIf="f.nombre.errors">*</div>
             </ion-item>
             <ion-item>
-              <ion-input formControlName="correo" type="email" placeholder="your@email.com" ngModel required></ion-input>
+              <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
               <div color="error" *ngIf="f.correo.errors">*</div>
             </ion-item>
             <ion-item>
@@ -22,8 +22,8 @@
               <div color="error" *ngIf="f.contrasena.errors">*</div>
             </ion-item>
             <ion-item>
-              <ion-input formControlName="confirmarContrasena" type="password" placeholder="Confirmar contraseña" ngModel required></ion-input>
-            <div color="error" *ngIf="f.confirmarContrasena.errors">*</div>
+              <ion-input formControlName="confirmacionContrasena" type="password" placeholder="Repetir contraseña" ngModel required></ion-input>
+            <div color="error" *ngIf="f.confirmacionContrasena.errors">*</div>
             </ion-item>
           </div>
           <div padding>

@@ -1,12 +1,3 @@
-/*import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class HttpServiceService {
-
-  constructor() { }
-}*/
 import { Observable } from 'rxjs';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
