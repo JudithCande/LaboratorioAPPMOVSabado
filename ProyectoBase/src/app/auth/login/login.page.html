@@ -1,0 +1,31 @@
+<ion-content color="secondary" padding>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h1 style = "font-size:50px"><b>FINIXER</b></h1>
+            <h3>Accede</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input formControlName="correo" type="email" placeholder="Correo" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="contrasena" type="password" placeholder="Contraseña" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button shape="round" size="large" type="submit" [disabled]="loginForm.invalid" expand="block">Entrar</ion-button>
+          </div>
+        </ion-col>
+        <ion-row>
+          <div text-center>
+              Si no tienes una cuenta, por favor <a routerLink='/registrar'>
+          registrate aqui</a> 
+          </div>
+      </ion-row>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
