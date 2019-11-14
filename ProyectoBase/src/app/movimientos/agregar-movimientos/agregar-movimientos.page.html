@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title>
+            Agregar Movimientos
+        </ion-title>
+        <ion-buttons slot="primary">
+            <ion-button class="botonCerrar" shape="round" size="small" (click)="cerrarModal()">cerrar</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content color="secondary">
+        <form [formGroup]="registrarForm" (ngSubmit)="registrar()">
+            <ion-grid>
+                <ion-row color="primary" justify-content-center>
+                    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                        <div padding>
+                            <ion-item>
+                                <ion-input formControlName="nombre" type="text" placeholder="Descripcion" ngModel
+                                    required></ion-input>
+                                <div color="error" *ngIf="f.nombre.errors">*</div>
+                            </ion-item>
+                            <ion-item>
+                                <ion-input formControlName="cantidad" type="email" placeholder="Cantidad" ngModel
+                                    required></ion-input>
+                                <div color="error" *ngIf="f.cantidad.errors">*</div>
+                            </ion-item>
+                        </div>
+                        <div class="divButton">
+                            <ion-button shape="round" size="large" type="submit" [disabled]="registrarForm.invalid">
+                                REGISTRAR
+                            </ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </form>
+        <ion-card>
+        <ion-segment (ionChange)="segmentChanged($event)">
+                <ion-segment-button value="ingreso">
+                    <ion-label>Ingreso</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="egreso">
+                    <ion-label>Egreso</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-card>
+                <ion-card>
+                <ion-list>
+                        <ion-item>
+                          <ion-label>Cuenta</ion-label>
+                          <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+                                <ion-select-option value="creditoBanorte">Crédito Banorte</ion-select-option>
+                                <ion-select-option value="DebitoBanregio">Debito Banregio</ion-select-option>
+                                <ion-select-option value="BBVA">Credito BBVA</ion-select-option>
+                                <ion-select-option value="Banamex">Credito Banamex</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Etiqueta</ion-label>
+                            <ion-select multiple="true" cancelText="F" okText="okText">   
+                            <ion-select-option value="deuda">1. Deuda</ion-select-option>
+                            <ion-select-option value="hogar">2. Hogar</ion-select-option>
+                            <ion-select-option value="alimento">3. Alimento</ion-select-option>
+                            <ion-select-option value="entretenimiento">4. Entretenimiento</ion-select-option>
+                            <ion-select-option value="Transporte">5. Transporte</ion-select-option>
+                            <ion-select-option value="Educacion">6. Educacion</ion-select-option>
+                            <ion-select-option value="Regalos">7. Regalos</ion-select-option>
+                            <ion-select-option value="Viajes">8. Viajes</ion-select-option>
+                            <ion-select-option value="Ingresos">9. Ingresos</ion-select-option>
+                            <ion-select-option value="Ropa">10. Ropa y Calzado</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card>
+    </ion-content>
+</ion-content>

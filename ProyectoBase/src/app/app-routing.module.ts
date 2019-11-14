@@ -11,7 +11,12 @@ const routes: Routes = [
   //{ path: 'registrar', component: RegistrarPage },
   { path: 'registrar', component: RegistrarPage},
   { path: 'login', component: LoginPage },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },  { path: 'home', loadChildren: './home/home.module#HomePageModule' }
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  // { path: 'movimientos', loadChildren: './movimientos/movimientos.module#MovimientosPageModule' },
+
+  // { path: 'cuenta', loadChildren: './cuenta/cuenta.module#CuentaPageModule' },
+
 
 
 ];

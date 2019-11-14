@@ -1,0 +1,33 @@
+.cardSubtitle{
+    color: #fff;
+    background-color: #24d6ea;
+
+}
+ion-item{
+    --background: #24d6ea;
+    --color: #fff;
+    --border-color: white;
+}
+ion-card{
+    width: 100% !important;
+  }
+
+.cardItems{
+    color: #fff;
+    --background:  #fff;
+}
+ion-card-content{
+    text-align: end;
+    margin-top: -60px;
+}
+
+ion-button{
+    --background: white;
+    --opacity: 100;	
+    font-family: 'Nunito';
+    font-weight: 900;
+    color: #15D0B3;
+}
+
+
+  

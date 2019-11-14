@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
+  <ion-toolbar color = "secondary">
+    <ion-title>Resumen</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color = "secondary">
+    <ion-card>
+        <ion-segment (ionChange)="segmentChanged($event)">
+                <ion-segment-button value="ingreso">
+                    <ion-label>Ingreso</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="egreso">
+                    <ion-label>Egreso</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-card>
+        <div class="ion-padding">
+          <ion-card>
+              <ion-card-content>
+                <canvas #doughnutCanvas></canvas>
+                </ion-card-content>
+          </ion-card>
+        </div>
 </ion-content>

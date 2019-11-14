@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color ="secondary">
+    <ion-title>Movimientos<ion-icon name="cash"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color ="secondary" padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let movimiento of movimientos">
+      <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="cardItems">
+            {{movimiento.Descripcion}}
+          </ion-card-title>
+          <ion-card-subtitle class="cardSubtitle" >
+          {{movimiento.etiqueta.Descripcion}} 
+        </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content class="cardItems">
+            {{movimiento.cuenta.nombre}}
+           <br/>
+           $ {{movimiento.Cantidad}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end"  slot="fixed">
+      <ion-fab-button (click)="onAgregarMovimientos()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>
