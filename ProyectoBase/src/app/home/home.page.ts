@@ -41,13 +41,13 @@ export class HomePage implements OnInit {
 //               "rgba(255, 206, 86, 0.2)",
 //               "rgba(75, 192, 192, 0.2)",
 //               "rgba(153, 102, 255, 0.2)",
-//               "rgba(255, 159, 64, 0.2)", //color repetido, se tiene que cambiar
-//               "rgba(255, 159, 64, 0.2)",//color repetido, se tiene que cambiar
-//               "rgba(255, 159, 64, 0.2)",//color repetido, se tiene que cambiar
-//               "rgba(255, 159, 64, 0.2)",//color repetido, se tiene que cambiar
-//               "rgba(255, 159, 64, 0.2)"//color repetido, se tiene que cambiar
+//               "rgba(4, 66, 58, 1)", 
+//               "rgba(1, 135, 202, 1)",
+//               "rgba(68, 144, 13, 1)",  
+//               "rgba(219, 10, 83, 0.9)",
+//               "rgba(10, 219, 41, 0.95)"
 //             ],
-//             hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#FF6384", "#36A2EB", "#FFCE56",/*Apartir de aqui los colores estan repetidos */ "#FFCE56", "#FFCE56", "#FFCE56", "#FFCE56"
+//             hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#FF6384", "#36A2EB", "#FFCE56", "#04423A", "#0187CA","#44900D","DB0A53", "#0ADB29", "#FFCE56", "#FFCE56", "#FFCE56", "#FFCE56"
 //         ]
 //       }
 //     }
